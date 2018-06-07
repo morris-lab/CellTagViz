@@ -7,7 +7,7 @@
 
 tagList(
   
-  tags$head(includeHTML(("google-analytics.html"))),
+  tags$head(includeHTML(("html/google-analytics.html"))),
   
 navbarPage(
   
@@ -21,7 +21,7 @@ navbarPage(
     
     mainPanel(
       
-      includeHTML("welcome.edit.html")
+      includeHTML("html/welcome.edit.html")
       
     )
     
@@ -174,7 +174,7 @@ navbarPage(
     
     mainPanel(
       
-      includeHTML("./people.tab.edit.html")
+      includeHTML("html/people.tab.edit.html")
       
     )
   )
