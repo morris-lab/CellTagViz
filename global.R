@@ -25,23 +25,23 @@ library(viridis)
 
 shinyjs::useShinyjs()
 
-dataPath <- "celltag.viz.data.txt"
+dataPath <- "data/celltag.viz.data.txt"
 
-seuratPath <- "seurat.gene.expression.subset.Rds"
+seuratPath <- "data/seurat.gene.expression.subset.Rds"
 
-monoclePath <- "monocle.gene.expression.subset.Rds"
+monoclePath <- "data/monocle.gene.expression.subset.Rds"
 
 #Data required for Clone Network Visualiztions
 #load(file = "links_and_Nodes.RData")
 
 #load(file = "tag_metadata.RData")
 
-load(file = "functions.RData")
+load(file = "data/functions.RData")
 
-load(file = "links_and_Nodes.HF1.RData")
-load(file = "links_and_Nodes.HF2.RData")
-load(file = "tag_metadata.HF1.RData")
-load(file = "tag_metadata.HF2.RData")
+load(file = "data/links_and_Nodes.HF1.RData")
+load(file = "data/links_and_Nodes.HF2.RData")
+load(file = "data/tag_metadata.HF1.RData")
+load(file = "data/tag_metadata.HF2.RData")
 
 netColorChoice <- colnames(hf1.Nodes)[c(6, 8, 10:15, 18)]
 
@@ -65,23 +65,23 @@ names(hf2.all_tags) <- hf2Names
 
 
 #Functions for generating ggplots of tsne or pseudotime data. Functions for normal, contour, and clonal plots. 
-source(file = "tsne.plot.functions.R")
+source(file = "R/tsne.plot.functions.R")
 
-source(file = "plotBase.R")
+source(file = "R/plotBase.R")
 
-source(file = "plotContour.R")
+source(file = "R/plotContour.R")
 
-source(file = "subsetCloneData.R")
+source(file = "R/subsetCloneData.R")
 
-source(file = "generatePlot.R")
+source(file = "R/generatePlot.R")
 
-source(file = "plotCloneLayer.R")
+source(file = "R/plotCloneLayer.R")
 
-source(file = "plotStackedBar.R")
+source(file = "R/plotStackedBar.R")
 
-source(file = "cloneVersion.R")
+source(file = "R/cloneVersion.R")
 
-source(file = "addGeneExpr.R")
+source(file = "R/addGeneExpr.R")
 
 #This loads the data and meta data used for plotting.
 
