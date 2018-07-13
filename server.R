@@ -30,7 +30,7 @@ shinyServer(function(session, input, output) {
   
   observeEvent(input$tab, {
     
-    if(input$tab == 1){
+    if(input$tab == 1 | input$tab == 6){
       
       geneChoice <- rownames(seuratExpr)
       

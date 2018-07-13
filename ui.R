@@ -122,6 +122,33 @@ navbarPage(
       ),
       
       conditionalPanel(
+        condition = "input.tab == 6",
+        
+        selectInput(
+          inputId = "groupVariable",
+          label = "Group By:",
+          choices = selectChoices[-c(1,2,4,6, 13)],
+          selectize = TRUE,
+          multiple = FALSE,
+          selected = "replicate"
+        ),
+        
+        selectizeInput(
+          inputId = "geneChoice",
+          label = "",
+          choices = geneChoice,
+          options = list(
+            placeholder = "Select A Gene",
+            onInitialize = I('function() { this.setValue(""); }')
+          )
+        )#,
+        
+        #downloadButton(outputId = "downloadStackedPlot",
+        #               label = "Download Plot"
+        #)
+      ),
+      
+      conditionalPanel(
         condition = "input.tab == 2",
         
         selectInput("rep", "Select a Replicate", choices = c("HF1", "HF2")),
@@ -146,6 +173,8 @@ navbarPage(
         tabPanel("Pseudotime", plotOutput("pseudotime"), value = 3),
         
         tabPanel("Stacked Bar Chart", plotOutput("StackedBarChart"), value = 4),
+        
+        tabPanel("Violin Plots", plotOutput("ViolinPlot"), value = 6),
         
         tabPanel("Meta Data", DT::dataTableOutput("cloneTable", width = "50%", height = "auto"), value = 5)
         
