@@ -45,9 +45,9 @@ data/seurat.gene.expression.subset.Rds
 
 welcome.*
 
-html/welcome.*
+./html/welcome.*
 
-!html/welcome.edit.html
+!./html/welcome.edit.html
 
 !welcome.edit.html
 
