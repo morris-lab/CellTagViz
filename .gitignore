@@ -42,3 +42,12 @@ data/monocle.gene.expression.subset.Rds
 data/seurat.gene.expression.subset.Rds
 
 .Rhistory
+
+welcome.*
+
+html/welcome.*
+
+!html/welcome.edit.html
+
+!welcome.edit.html
+
